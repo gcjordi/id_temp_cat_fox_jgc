@@ -22,7 +22,7 @@ void setup() {
 
   byte temperatura = (int)SigFox.internalTemperature();
 
-  Serial.print("La temperatura interna es de: ");
+  Serial.print("Temperatura interna actual: ");
   Serial.println(temperatura);
 
   SigFox.status();
@@ -35,10 +35,10 @@ void setup() {
   int resultado = SigFox.endPacket();
 
   if(resultado == 0){
-    Serial.println("Mensaje enviado !!!");
+    Serial.println("Missatge enviat !!!");
   }
   else{
-    Serial.println("Error al enviar el mensaje");
+    Serial.println("Error en enviar el missatge");
     while(1);
   }
 

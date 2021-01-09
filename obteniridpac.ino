@@ -3,25 +3,25 @@
 #include <RTCZero.h>
 
 void setup() {
-  // Configuración del monitor serie
+  // Configurar monitor serial
   Serial.begin(9600);
   delay(1000);
   
-  // Iniciamos módulo Sigfox
+  // Iniciem Sigfox
   if(!SigFox.begin()){
-    Serial.println("Error al iniciar módulo Sigfox");
+    Serial.println("Error inici Sigfox");
     return;
   }
 
-  // Mostramos la información del ID y de PAC
+  // Mostrem ID i PAC
   Serial.println("ID = " + SigFox.ID());
   Serial.println("PAC = " + SigFox.PAC());
 
-  // Apagamos el módulo
+  // Apaguem Sigfox
   SigFox.end();
 }
 
 void loop() {
-  // En el loop no hacemos nada
+  // Al loop no fem res 
 
 }
